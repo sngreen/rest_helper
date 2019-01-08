@@ -9,7 +9,6 @@ Options:
 """
 
 import os.path
-import string
 from docopt import docopt
 
 try:
