@@ -9,6 +9,7 @@ Options:
 """
 
 import os.path
+import string
 from docopt import docopt
 
 try:
@@ -43,7 +44,8 @@ class RestHelper(object):
         urlpath  = self.parser.get('Data', 'urlpath')
         for name, value in self.parser.items("Urls"):
             count += 1
-            print ("%s@%s%s" % (username,value,urlpath))
+            print ("%s%s" % (value.replace("//", "//%s@" % username), urlpath))
+            
             if count == int(self.num):
                 break
                     
