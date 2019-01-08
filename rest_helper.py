@@ -39,10 +39,11 @@ class RestHelper(object):
         self.parser.read(self.config)
         count = 0
         
-        # apparently we are only interested in "Urls"
+        username = self.parser.get('Data', 'username')
+        urlpath  = self.parser.get('Data', 'urlpath')
         for name, value in self.parser.items("Urls"):
             count += 1
-            print (value) 
+            print ("%s@%s%s" % (username,value,urlpath))
             if count == int(self.num):
                 break
                     
