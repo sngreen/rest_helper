@@ -4,7 +4,7 @@ Usage:
     rest_helper.py -n <num> -c <config>
 
 Options:
-    -n, --num <num>         Number between 1 and 4
+    -n, --num <num>         Number (larger than 0) 
     -c, --config <config>   Config file
     -h, --help              Show this screen and exit.
 """
