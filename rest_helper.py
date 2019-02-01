@@ -63,7 +63,7 @@ class RestHelper(object):
             count += 1
             uo = urlparse(value)
                 
-            print "%s://%s@%s%s" % (uo.scheme, username, uo.netloc, urlpath )
+            print ("%s://%s@%s%s" % (uo.scheme, username, uo.netloc, urlpath ))
                 
             if count == int(self.num):
                 break
